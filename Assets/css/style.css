@@ -57,13 +57,35 @@ body{
     font-size:45px;
     color:#054236;
     display:none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
 }
+
 
 @media (max-width:768px){
     .menu{ display:none; }
     .hamburguesa{ display:block; }
 }
+/* Menú escondido en mobile */
+.menu {
+    transition: max-height 0.3s ease-in-out;
+}
 
+/* Estado cerrado */
+@media (max-width:768px){
+    .menu {
+        display: block; /* necesitamos mantenerlo para animarlo */
+        overflow: hidden;
+        max-height: 0;
+    }
+}
+
+/* Estado abierto */
+.menu.activo {
+    max-height: 500px; /* suficiente para mostrar los enlaces */
+}
 /* ------------------------- */
 /*       TITULOS ELEGANTES   */
 /* ------------------------- */
