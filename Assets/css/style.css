@@ -270,3 +270,48 @@ footer{
     border-color: #976cb8;
 }
 .home{color: #8fb093;}
+/* ------------------------- */
+/*      GRID DE PROCESOS     */
+/* ------------------------- */
+
+.listaprocesos {
+    background-color: #efebf1;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 1200px;
+    margin: auto;
+
+    /* GRID */
+    display: grid;
+    grid-template-columns: 1fr; /* mobile */
+    gap: 25px; /* separación entre cards */
+}
+
+/* Cada ítem de proceso */
+.listaprocesos .proceso {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Efecto hover */
+.listaprocesos .proceso:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+/* Tablet (2 columnas) */
+@media (min-width: 768px) {
+    .listaprocesos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Escritorio (3 columnas) */
+@media (min-width: 1024px) {
+    .listaprocesos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
