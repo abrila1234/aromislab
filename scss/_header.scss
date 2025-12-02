@@ -1,0 +1,54 @@
+body{
+    font-family: "Source Sans Pro", sans-serif;
+    color:#333;
+    background-color:white;
+    line-height:1.5;
+    padding:20px; /* margen lateral global en mobile */
+    /* ------------------------- */
+/*       ENCABEZADO NAV      */
+/* ------------------------- */
+    .headerindex{
+    background-color:#dec2f1;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 25px;
+    border-radius:10px;
+    ul{
+    display:flex;
+    list-style:none;
+    gap:15px;
+     a{
+    text-decoration:none;
+    font-family:"Source Sans Pro", sans-serif;
+    font-weight:600;
+    color:#054236;
+    transition:0.3s;
+    hover{
+    color:#0b6f58;
+}
+}
+
+}
+}
+}
+
+
+.hamburguesa{
+    font-size:45px;
+    color:#054236;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    .menu {
+    transition: max-height 0.3s ease-in-out;
+    /* Estado abierto */
+.activo {
+    max-height: 500px; 
+}
+}
+
+
+}
+

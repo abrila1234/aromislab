@@ -1,0 +1,103 @@
+/* ------------------------- */
+/*       TITULOS ELEGANTES   */
+/* ------------------------- */
+h1, h2, h3{
+    font-family:"Cormorant Garamond", serif;
+    font-weight:600;
+    line-height:1.2;
+   
+}
+
+.Aromislab img{
+    display:block;
+    margin:0 auto;
+}
+
+.tituloprod{
+    font-size:50px;
+    color:#7c5fa3;
+    margin:30px 0 10px 0;
+    text-align:center;
+ /* ------------------------- */
+/*       LISTAS Y TEXTO       */
+/* ------------------------- */
+.finas{
+    color:#8a5fa5;
+    font-size:34px;
+    margin-top:40px;
+    text-align:center;
+}
+.finas2{
+    font-family:"Cormorant Garamond", serif;
+    font-size:20px;
+    margin-top:20px;
+    padding-left:25px;
+    color:#333;
+}
+}
+
+
+.listaservicios{
+    padding-left:20px;
+    font-size:20px;
+    line-height:1.6;
+}
+
+/* ------------------------- */
+/*   SUBTÍTULOS CURSIVOS     */
+/* ------------------------- */
+.subtituloindex,
+.frasenosotros{
+    font-family:"Cormorant Garamond", serif;
+    font-size:36px;
+    color:#a680c0;
+    text-align:center;
+}
+
+
+
+
+/* ------------------------- */
+/*         FORMULARIO        */
+/* ------------------------- */
+#form{
+    max-width:900px;
+    padding:30px;
+    margin:auto;
+    background-color:#f4eef8;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    .label{
+    font-weight:600;
+    color:#8a5fa5;
+    .texto{
+    width:100%;
+    padding:12px;
+    margin-bottom:20px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    .boton{
+    background-color:#a8c0a7;
+    color:white;
+    font-weight:700;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+    &hover{
+    background-color:#8fb093;
+}
+}
+
+}
+}
+
+}
+
+
+
+
+
+
+

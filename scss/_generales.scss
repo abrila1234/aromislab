@@ -1,0 +1,138 @@
+/* ------------------------- */
+/*        TIPOGRAFÍAS        */
+/* ------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Mrs+Saint+Delafield&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------------------------- */
+/*          IMÁGENES         */
+/* ------------------------- */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ------------------------- */
+/*         PROCESOS          */
+/* ------------------------- */
+.listaprocesos {
+    background-color: #efebf1;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ------------------------- */
+/*          FOOTER           */
+/* ------------------------- */
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #d8c9e9;
+
+    .polseguridad {
+        font-family: "Cormorant Garamond";
+        font-size: 28px;
+        margin: 15px 0;
+        color: #7a4343;
+    }
+
+    .textoseguridad {
+        font-family: "Source Sans Pro", sans-serif;
+        margin-bottom: 15px;
+    }
+
+}
+
+
+
+
+
+/* ------------------------- */
+/*   SOBRE NOSOTROS (detalle)*/
+/* ------------------------- */
+.frasenosotros {
+    color: #117864;
+    font-weight: 600;
+    text-decoration: underline #044436;
+}
+
+.home {
+    color: #8fb093;
+
+    .color1 {
+        color: #117864;
+
+        .color2 {
+            color: #a680c0;
+        }
+    }
+}
+
+
+/* Botones personalizados */
+.btn-verproductos {
+    background-color: #117864;
+    border-color: #117864;
+    color: white;
+
+    .hover {
+        background-color: #0f5e50;
+        border-color: #0f5e50;
+    }
+}
+
+
+
+.btn-conocenos {
+    background-color: #a680c0;
+    border-color: #a680c0;
+    color: white;
+
+    .hover {
+        background-color: #976cb8;
+        border-color: #976cb8;
+    }
+}
+
+
+/* ------------------------- */
+/*      GRID DE PROCESOS     */
+/* ------------------------- */
+
+.listaprocesos {
+    background-color: #efebf1;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 1200px;
+    margin: auto;
+
+    /* GRID */
+    display: grid;
+    grid-template-columns: 1fr;
+    /* mobile */
+    gap: 25px;
+
+    /* separación entre cards */
+    /* Cada ítem de proceso */
+    .proceso {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    /* Efecto hover */
+    .hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    }
+}

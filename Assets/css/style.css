@@ -1,317 +1,296 @@
+@charset "UTF-8";
 /* ------------------------- */
 /*        TIPOGRAFÍAS        */
 /* ------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Mrs+Saint+Delafield&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Mrs+Saint+Delafield&family=Source+Sans+Pro:wght@300;400;600;700&display=swap");
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #333;
+  background-color: white;
+  line-height: 1.5;
+  padding: 20px; /* margen lateral global en mobile */
+  /* ------------------------- */
+  /*       ENCABEZADO NAV      */
+  /* ------------------------- */
+}
+body .headerindex {
+  background-color: #dec2f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+body .headerindex ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+body .headerindex ul a {
+  text-decoration: none;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  color: #054236;
+  transition: 0.3s;
+}
+body .headerindex ul a hover {
+  color: #0b6f58;
 }
 
-body{
-    font-family: "Source Sans Pro", sans-serif;
-    color:#333;
-    background-color:white;
-    line-height:1.5;
-    padding:20px; /* margen lateral global en mobile */
+.hamburguesa {
+  font-size: 45px;
+  color: #054236;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.hamburguesa .menu {
+  transition: max-height 0.3s ease-in-out;
+  /* Estado abierto */
+}
+.hamburguesa .menu .activo {
+  max-height: 500px;
 }
 
-@media (min-width: 768px){
-    body{
-        padding:40px 60px; /* margen lateral global escritorio */
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* ------------------------- */
-/*       ENCABEZADO NAV      */
+/*          IMÁGENES         */
 /* ------------------------- */
-.headerindex{
-    background-color:#dec2f1;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 25px;
-    border-radius:10px;
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
-.menu ul{
-    display:flex;
-    list-style:none;
-    gap:15px;
+/* ------------------------- */
+/*         PROCESOS          */
+/* ------------------------- */
+.listaprocesos {
+  background-color: #efebf1;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: auto;
 }
 
-.menu ul li a{
-    text-decoration:none;
-    font-family:"Source Sans Pro", sans-serif;
-    font-weight:600;
-    color:#054236;
-    transition:0.3s;
+/* ------------------------- */
+/*          FOOTER           */
+/* ------------------------- */
+footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 2px solid #d8c9e9;
+}
+footer .polseguridad {
+  font-family: "Cormorant Garamond";
+  font-size: 28px;
+  margin: 15px 0;
+  color: #7a4343;
+}
+footer .textoseguridad {
+  font-family: "Source Sans Pro", sans-serif;
+  margin-bottom: 15px;
 }
 
-.menu ul li a:hover{
-    color:#0b6f58;
+/* ------------------------- */
+/*   SOBRE NOSOTROS (detalle)*/
+/* ------------------------- */
+.frasenosotros {
+  color: #117864;
+  font-weight: 600;
+  text-decoration: underline #044436;
 }
 
-.hamburguesa{
-    font-size:45px;
-    color:#054236;
-    display:none;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-
+.home {
+  color: #8fb093;
+}
+.home .color1 {
+  color: #117864;
+}
+.home .color1 .color2 {
+  color: #a680c0;
 }
 
-
-@media (max-width:768px){
-    .menu{ display:none; }
-    .hamburguesa{ display:block; }
+/* Botones personalizados */
+.btn-verproductos {
+  background-color: #117864;
+  border-color: #117864;
+  color: white;
 }
-/* Menú escondido en mobile */
-.menu {
-    transition: max-height 0.3s ease-in-out;
-}
-
-/* Estado cerrado */
-@media (max-width:768px){
-    .menu {
-        display: block; /* necesitamos mantenerlo para animarlo */
-        overflow: hidden;
-        max-height: 0;
-    }
+.btn-verproductos .hover {
+  background-color: #0f5e50;
+  border-color: #0f5e50;
 }
 
-/* Estado abierto */
-.menu.activo {
-    max-height: 500px; /* suficiente para mostrar los enlaces */
+.btn-conocenos {
+  background-color: #a680c0;
+  border-color: #a680c0;
+  color: white;
 }
+.btn-conocenos .hover {
+  background-color: #976cb8;
+  border-color: #976cb8;
+}
+
+/* ------------------------- */
+/*      GRID DE PROCESOS     */
+/* ------------------------- */
+.listaprocesos {
+  background-color: #efebf1;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 1200px;
+  margin: auto;
+  /* GRID */
+  display: grid;
+  grid-template-columns: 1fr;
+  /* mobile */
+  gap: 25px;
+  /* separación entre cards */
+  /* Cada ítem de proceso */
+}
+.listaprocesos .proceso {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.listaprocesos {
+  /* Efecto hover */
+}
+.listaprocesos .hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
 /* ------------------------- */
 /*       TITULOS ELEGANTES   */
 /* ------------------------- */
-h1, h2, h3{
-    font-family:"Cormorant Garamond", serif;
-    font-weight:600;
-    line-height:1.2;
+h1, h2, h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
-.Aromislab img{
-    display:block;
-    margin:0 auto;
+.Aromislab img {
+  display: block;
+  margin: 0 auto;
 }
 
-.tituloprod{
-    font-size:50px;
-    color:#7c5fa3;
-    margin:30px 0 10px 0;
-    text-align:center;
+.tituloprod {
+  font-size: 50px;
+  color: #7c5fa3;
+  margin: 30px 0 10px 0;
+  text-align: center;
+  /* ------------------------- */
+  /*       LISTAS Y TEXTO       */
+  /* ------------------------- */
+}
+.tituloprod .finas2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  margin-top: 20px;
+  padding-left: 25px;
+  color: #333;
 }
 
-#finas{
-    color:#8a5fa5;
-    font-size:34px;
-    margin-top:40px;
-    text-align:center;
+.listaservicios {
+  padding-left: 20px;
+  font-size: 20px;
+  line-height: 1.6;
 }
 
 /* ------------------------- */
 /*   SUBTÍTULOS CURSIVOS     */
 /* ------------------------- */
 .subtituloindex,
-.frasenosotros{
-    font-family:"Cormorant Garamond", serif;
-    font-size:36px;
-    color:#a680c0;
-    text-align:center;
-}
-
-/* ------------------------- */
-/*       LISTAS Y TEXTO       */
-/* ------------------------- */
-.finas2{
-    font-family:"Cormorant Garamond", serif;
-    font-size:20px;
-    margin-top:20px;
-    padding-left:25px;
-    color:#333;
-}
-
-.listaservicios{
-    padding-left:20px;
-    font-size:20px;
-    line-height:1.6;
-}
-
-/* ------------------------- */
-/*          IMÁGENES         */
-/* ------------------------- */
-img{
-    max-width:100%;
-    height:auto;
-    border-radius:8px;
+.frasenosotros {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 36px;
+  color: #a680c0;
+  text-align: center;
 }
 
 /* ------------------------- */
 /*         FORMULARIO        */
 /* ------------------------- */
-#form{
-    max-width:900px;
-    padding:30px;
-    margin:auto;
-    background-color:#f4eef8;
-    border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+#form {
+  max-width: 900px;
+  padding: 30px;
+  margin: auto;
+  background-color: #f4eef8;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.label{
-    font-weight:600;
-    color:#8a5fa5;
+.label {
+  font-weight: 600;
+  color: #8a5fa5;
 }
 
-.texto{
-    width:100%;
-    padding:12px;
-    margin-bottom:20px;
-    border-radius:8px;
-    border:1px solid #ccc;
+.texto {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
-.boton{
-    background-color:#a8c0a7;
-    color:white;
-    font-weight:700;
-    border:none;
-    padding:12px 25px;
-    border-radius:8px;
-    cursor:pointer;
-    transition:0.3s;
+.boton {
+  background-color: #a8c0a7;
+  color: white;
+  font-weight: 700;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.boton:hover{
-    background-color:#8fb093;
+.boton:hover {
+  background-color: #8fb093;
 }
 
-/* ------------------------- */
-/*         PROCESOS          */
-/* ------------------------- */
-.listaprocesos{
-    background-color:#efebf1;
-    padding:25px;
-    border-radius:12px;
-    max-width:900px;
-    margin:auto;
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+  .hamburguesa {
+    display: block;
+  }
 }
-
-/* ------------------------- */
-/*          FOOTER           */
-/* ------------------------- */
-footer{
-    margin-top:40px;
-    padding-top:20px;
-    border-top:2px solid #d8c9e9;
+/* Menú escondido en mobile */
+@media (min-width: 768px) {
+  body {
+    padding: 40px 60px; /* margen lateral global escritorio */
+  }
 }
-
-.polseguridad{
-    font-family:"Cormorant Garamond";
-    font-size:28px;
-    margin:15px 0;
-    color:#7a4343;
+/* Estado cerrado */
+@media (max-width: 768px) {
+  .menu {
+    display: block; /* necesitamos mantenerlo para animarlo */
+    overflow: hidden;
+    max-height: 0;
+  }
 }
-
-.textoseguridad{
-    font-family:"Source Sans Pro", sans-serif;
-    margin-bottom:15px;
-}
-
-/* ------------------------- */
-/*   SOBRE NOSOTROS (detalle)*/
-/* ------------------------- */
-.frasenosotros{
-    color:#117864;
-    font-weight:600;
-    text-decoration: underline #044436;
-}
-.contenido-home .color1 {
-    color: #117864;
-}
-
-.contenido-home .color2 {
-    color: #a680c0;
-}
-/* Colores para los textos de los items */
-.contenido-home .color1 {
-    color: #117864;  /* Verde */
-}
-
-.contenido-home .color2 {
-    color: #a680c0;  /* Lila */
-}
-
-/* Botones personalizados */
-.btn-verproductos {
-    background-color: #117864;
-    border-color: #117864;
-    color: white;
-}
-
-.btn-verproductos:hover {
-    background-color: #0f5e50;
-    border-color: #0f5e50;
-}
-
-.btn-conocenos {
-    background-color: #a680c0;
-    border-color: #a680c0;
-    color: white;
-}
-
-.btn-conocenos:hover {
-    background-color: #976cb8;
-    border-color: #976cb8;
-}
-.home{color: #8fb093;}
-/* ------------------------- */
-/*      GRID DE PROCESOS     */
-/* ------------------------- */
-
-.listaprocesos {
-    background-color: #efebf1;
-    padding: 25px;
-    border-radius: 12px;
-    max-width: 1200px;
-    margin: auto;
-
-    /* GRID */
-    display: grid;
-    grid-template-columns: 1fr; /* mobile */
-    gap: 25px; /* separación entre cards */
-}
-
-/* Cada ítem de proceso */
-.listaprocesos .proceso {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-/* Efecto hover */
-.listaprocesos .proceso:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-}
-
 /* Tablet (2 columnas) */
 @media (min-width: 768px) {
-    .listaprocesos {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .listaprocesos {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-
 /* Escritorio (3 columnas) */
 @media (min-width: 1024px) {
-    .listaprocesos {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .listaprocesos {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
+
+/*# sourceMappingURL=style.css.map */

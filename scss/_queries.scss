@@ -1,0 +1,39 @@
+@media (max-width:768px){
+    .menu{ display:none; }
+    .hamburguesa{ display:block; }
+}
+/* Menú escondido en mobile */
+
+@media (min-width: 768px){
+    body{
+        padding:40px 60px; /* margen lateral global escritorio */
+    }
+}
+
+
+/* Estado cerrado */
+@media (max-width:768px){
+    .menu {
+        display: block; /* necesitamos mantenerlo para animarlo */
+        overflow: hidden;
+        max-height: 0;
+    }
+}
+
+
+
+
+
+/* Tablet (2 columnas) */
+@media (min-width: 768px) {
+    .listaprocesos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Escritorio (3 columnas) */
+@media (min-width: 1024px) {
+    .listaprocesos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
