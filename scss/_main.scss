@@ -1,3 +1,9 @@
+@use'../base/variables';
+@use'../utilities/maps'as mapa;
+@use'../utilities/extend';
+@use'../utilities/mixin';
+
+
 /* ------------------------- */
 /*       TITULOS ELEGANTES   */
 /* ------------------------- */
@@ -15,24 +21,24 @@ h1, h2, h3{
 
 .tituloprod{
     font-size:50px;
-    color:#7c5fa3;
+    color:map.get(mapa.$colores, color-9);
     margin:30px 0 10px 0;
-    text-align:center;
+    @include mixin.text-center(center);
  /* ------------------------- */
 /*       LISTAS Y TEXTO       */
 /* ------------------------- */
 .finas{
-    color:#8a5fa5;
+    color:map.get(mapa.$colores, color-6);
     font-size:34px;
     margin-top:40px;
-    text-align:center;
+    @include mixin.text-center(center);
 }
 .finas2{
     font-family:"Cormorant Garamond", serif;
     font-size:20px;
     margin-top:20px;
     padding-left:25px;
-    color:#333;
+    color:map.get(mapa.$colores, color-1);
 }
 }
 
@@ -50,8 +56,8 @@ h1, h2, h3{
 .frasenosotros{
     font-family:"Cormorant Garamond", serif;
     font-size:36px;
-    color:#a680c0;
-    text-align:center;
+    color:variables.$color-terciario;
+    @include mixin.text-center(center);
 }
 
 
@@ -64,21 +70,21 @@ h1, h2, h3{
     max-width:900px;
     padding:30px;
     margin:auto;
-    background-color:#f4eef8;
+    background-color:map.get(mapa.$colores, color-2);
     border-radius:12px;
     box-shadow:0 4px 12px rgba(0,0,0,0.1);
     .label{
     font-weight:600;
-    color:#8a5fa5;
+    color:variables.$color-terciario;
     .texto{
     width:100%;
     padding:12px;
     margin-bottom:20px;
     border-radius:8px;
-    border:1px solid #ccc;
+    border:1px solid map.get(mapa.$colores, color-2);
     .boton{
-    background-color:#a8c0a7;
-    color:white;
+    background-color:map.get(mapa.$colores, color-3);
+    color:map.get(mapa.$colores, color-2);
     font-weight:700;
     border:none;
     padding:12px 25px;
@@ -86,7 +92,7 @@ h1, h2, h3{
     cursor:pointer;
     transition:0.3s;
     &hover{
-    background-color:#8fb093;
+    background-color:map.get(mapa.$colores, color-8);
 }
 }
 
