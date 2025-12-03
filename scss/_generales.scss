@@ -1,7 +1,8 @@
-@use'../base/variables';
-@use'../utilities/maps' as mapa;
-@use'../utilities/extend';
-@use'../utilities/mixin';
+@use '../scss/base/variables';
+@use '../scss/utilities/maps' as mapa;
+@use '../scss/utilities/extend';
+@use '../scss/utilities/mixin';
+
 
 
 
@@ -120,22 +121,24 @@ footer {
     border-radius: 12px;
     max-width: 1200px;
     margin: auto;
-
     @include mixin.grid-center(grid);
     grid-template-columns: 1fr;
     gap: 25px;
+    
 
-    .proceso {
-        background: map.get(mapa.$colores, color-2);
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
-
-        /* Efecto hover */
-        &hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+        .proceso {
+            background: map.get(mapa.$colores, color-2);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            &:hover {
+                cursor: pointer;
+                transform: translateY(-10px);
+                box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+            }
         }
+
+
     }
-}
+ 
