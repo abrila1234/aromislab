@@ -6,3 +6,6 @@
 @mixin text-center($align) {
     text-align: $align;
 }
+@mixin grid-center($display){
+    display:$display;
+}

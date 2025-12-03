@@ -1,5 +1,5 @@
 @use'../base/variables';
-@use'../utilities/maps'as mapa;
+@use'../utilities/maps' as mapa;
 @use'../utilities/extend';
 @use'../utilities/mixin';
 
@@ -66,16 +66,16 @@ footer {
 /*   SOBRE NOSOTROS (detalle)*/
 /* ------------------------- */
 .frasenosotros {
-    color:map.get(mapa.$colores, color-4);
+    color: map.get(mapa.$colores, color-4);
     font-weight: 600;
     text-decoration: underline map.get(mapa.$colores, color-4);
 }
 
 .home {
-    color:map.get(mapa.$colores, color-8);
+    color: map.get(mapa.$colores, color-8);
 
     .color1 {
-        color:map.get(mapa.$colores, color-4);
+        color: map.get(mapa.$colores, color-4);
 
         .color2 {
             color: variables.$color-terciario;
@@ -86,7 +86,7 @@ footer {
 
 /* Botones personalizados */
 .btn-verproductos {
-    background-color:map.get(mapa.$colores, color-4);
+    background-color: map.get(mapa.$colores, color-4);
     border-color: map.get(mapa.$colores, color-4);
     color: map.get(mapa.$colores, color-2);
 
@@ -99,13 +99,13 @@ footer {
 
 
 .btn-conocenos {
-    background-color:variables.$color-terciario;
+    background-color: variables.$color-terciario;
     border-color: variables.$color-terciario;
     color: map.get(mapa.$colores, color-2);
 
     .hover {
         background-color: map.get(mapa.$colores, color-6);
-        border-color:map.get(mapa.$colores, color-6);
+        border-color: map.get(mapa.$colores, color-6);
     }
 }
 
@@ -115,31 +115,27 @@ footer {
 /* ------------------------- */
 
 .listaprocesos {
-    background-color:map.get(mapa.$colores, color-2);
+    background-color: map.get(mapa.$colores, color-2);
     padding: 25px;
     border-radius: 12px;
     max-width: 1200px;
     margin: auto;
 
-    /* GRID */
-   @include mixin.flex-center(grid);
+    @include mixin.grid-center(grid);
     grid-template-columns: 1fr;
-    /* mobile */
     gap: 25px;
 
-    /* separación entre cards */
-    /* Cada ítem de proceso */
     .proceso {
         background: map.get(mapa.$colores, color-2);
         padding: 20px;
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
 
-    /* Efecto hover */
-    .hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+        /* Efecto hover */
+        &hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+        }
     }
 }
